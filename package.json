@@ -1,0 +1,14 @@
+{
+  "name": "nodescripts",
+  "version": "1.0.0",
+  "description": "simple scripts",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Tesfamichael Molla",
+  "license": "ISC",
+  "dependencies": {
+    "google-spreadsheet": "^2.0.8"
+  }
+}
