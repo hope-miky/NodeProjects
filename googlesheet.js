@@ -6,7 +6,7 @@ function printStudent(student) {
     console.log('Name: ' + student.studentname);
     console.log('Major: ' + student.major);
     console.log('Home: ' + student.homestate);
-    console.log('--------------------------------------')
+    console.log('--------------------------------------');
 }
 
 
@@ -20,15 +20,16 @@ async function accessSpreadsheet() {
 
     const rows = await promisify(sheet.getRows)({
         offset: 1,
-        limit: 10,
-        orderby: 'homestate',
+        limit: 1,
+        //orderby: 'homestate',
         //query: 'homestate = AK',
     });
 
     //console.log(rows)
 
     rows.forEach(row => {
-        row.homestate = ''
+        row.homestate = 'MD';
+        row.save();
         printStudent(row);
     });
 
